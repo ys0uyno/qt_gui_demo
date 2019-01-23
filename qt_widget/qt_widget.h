@@ -15,8 +15,13 @@ public:
     explicit qt_widget(QWidget *parent = nullptr);
     ~qt_widget();
 
+protected:
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+
 private:
     Ui::qt_widget *ui;
+    QPoint dragPosition;
 };
 
 #endif // QT_WIDGET_H
