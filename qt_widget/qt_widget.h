@@ -18,10 +18,12 @@ public:
 protected:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
+    void paintEvent(QPaintEvent *event) override;
 
 private:
     Ui::qt_widget *ui;
     QPoint dragPosition;
+    QPixmap pngBackGround;
 };
 
 #endif // QT_WIDGET_H

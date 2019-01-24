@@ -9,6 +9,14 @@ qt_widget::qt_widget(QWidget *parent) :
     ui->setupUi(this);
 
     setWindowFlag(Qt::FramelessWindowHint);
+    setAttribute(Qt::WA_TranslucentBackground);
+
+    pngBackGround.load(":./images/background.png");
+    if (pngBackGround.isNull()) {
+        qDebug("load backround image failed");
+    }
+
+    pngBackGround = pngBackGround.scaled(size());
 }
 
 qt_widget::~qt_widget()
@@ -30,4 +38,12 @@ void qt_widget::mouseMoveEvent(QMouseEvent *event)
         move(event->globalPos() - dragPosition);
         event->accept();
     }
+}
+
+void qt_widget::paintEvent(QPaintEvent *event)
+{
+    Q_UNUSED(event);
+
+    QPainter paint(this);
+    paint.drawPixmap(0, 0, pngBackGround);
 }
