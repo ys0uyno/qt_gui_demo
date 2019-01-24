@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>qt_widget</class>
- <widget class="QWidget" name="qt_widget" >
-  <property name="geometry" >
+ <widget class="QWidget" name="qt_widget">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,12 +10,14 @@
     <height>300</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>qt_widget</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">border-image: url(:/images/background.png);</string>
+  </property>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>

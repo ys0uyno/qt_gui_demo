@@ -23,7 +23,6 @@ protected:
 private:
     Ui::qt_widget *ui;
     QPoint dragPosition;
-    QPixmap pngBackGround;
 };
 
 #endif // QT_WIDGET_H
