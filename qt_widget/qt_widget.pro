@@ -26,13 +26,16 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        qt_widget.cpp
+        qt_widget.cpp \
+    close_dlg.cpp
 
 HEADERS += \
-        qt_widget.h
+        qt_widget.h \
+    close_dlg.h
 
 FORMS += \
-        qt_widget.ui
+        qt_widget.ui \
+    close_dlg.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

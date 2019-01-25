@@ -1,5 +1,6 @@
 #include "qt_widget.h"
 #include "ui_qt_widget.h"
+#include "close_dlg.h"
 #include <QtWidgets>
 
 qt_widget::qt_widget(QWidget *parent) :
@@ -41,4 +42,12 @@ void qt_widget::paintEvent(QPaintEvent *event)
     opt.init(this);
     QPainter p(this);
     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
+void qt_widget::on_finishBtn_clicked()
+{
+    close_dlg cd;
+    if (QDialog::Accepted == cd.exec()) {
+        qApp->quit();
+    }
 }
